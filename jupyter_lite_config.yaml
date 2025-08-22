@@ -1,8 +1,12 @@
 {
+  "LiteBuildConfig": { "ignore_sys_prefix": false },
   "jupyter-config-data": {
-    "collaborative": false,
-    "disabledExtensions": [
-      "jupyter_collaboration"
-    ]
+    "collaborative": true,
+    "@jupyterlab/collaboration-extension:webrtc": {
+      "signalingServers": [
+        "wss://signaling.yjs.dev",
+        "wss://y-webrtc-signaling-eu.herokuapp.com"
+      ]
+    }
   }
 }
