@@ -1,5 +1,6 @@
+# Core modules (mandatory)
 jupyterlite-core==0.6.4
-jupyterlite-pyodide-kernel==0.6.1
+jupyterlab~=4.4.5
+notebook~=7.4.5
+
 jupytergis
-ipywidgets>=8,<9
-jupyter-collaboration
