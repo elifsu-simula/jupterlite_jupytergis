@@ -44,4 +44,8 @@ ipyleaflet
 plotly>=6,<7
 bqplot
 
+jupyterlite
+jupyterlite-pyodide-kernel
+jupyterlite-pyodide-lock
 jupytergis
+
