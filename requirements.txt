@@ -44,4 +44,4 @@ ipyleaflet
 plotly>=6,<7
 bqplot
 
-jupytergis-lab
+jupytergis
