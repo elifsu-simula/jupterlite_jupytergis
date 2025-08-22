@@ -3,4 +3,7 @@ jupyterlite-core==0.6.4
 jupyterlab~=4.4.5
 notebook~=7.4.5
 
+jupyterlite-pyodide-kernel==0.6.1
 jupytergis-lab
+jupytergis-notebook
+jupytergis
