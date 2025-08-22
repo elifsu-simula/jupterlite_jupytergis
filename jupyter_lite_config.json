@@ -1,0 +1,6 @@
+{
+  "LiteBuildConfig": { "ignore_sys_prefix": false },
+  "PyodideLockAddon": {
+    "specs": ["jupytergis", "ipywidgets>=8,<9"]
+  }
+}
