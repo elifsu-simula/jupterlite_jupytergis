@@ -32,7 +32,6 @@ jobs:
             echo 'ERROR: Found "RTC:" reference in built site'; exit 1
           fi
           git grep -n 'RTC:' || true
-          git ls-files '*workspaces*.jupyterlab-workspace'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
