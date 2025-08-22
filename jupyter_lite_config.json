@@ -4,11 +4,14 @@
     "collaborative": false,
     "disabledExtensions": [
       "jupyter_collaboration",
-      "@jupyterlab/collaboration-extension"
+      "@jupyterlab/collaboration-extension",
+      "@jupyterlab/apputils-extension:workspaces"
     ],
     "disabledPlugins": [
       "jupyter_collaboration:*",
-      "@jupyterlab/collaboration-extension:*"
-    ]
+      "@jupyterlab/collaboration-extension:*",
+      "@jupyterlab/apputils-extension:workspaces"
+    ],
+    "appVersion": "nocache-1"
   }
 }
