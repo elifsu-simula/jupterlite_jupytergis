@@ -2,9 +2,11 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ '*' ]
+    branches:
+      - '*'
 
 jobs:
   build:
@@ -12,40 +14,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Install deps
+      - name: Install the dependencies
         run: |
-          python -m pip install -U pip
-          pip install --upgrade-strategy eager -r requirements.txt
-          # (optional) show discovered lab extensions
-          jupyter labextension list || true
-
-      - name: Build JupyterLite to dist/
+          python -m pip install -r requirements.txt
+          python -m pip uninstall -y jupyter-collaboration
+      - name: Build the JupyterLite site
         run: |
-          mkdir -p content
-          cp -f README.md content/ || true
-          # single clean build to dist/
-          jupyter lite build --output-dir dist --debug
-
-          # --- sanitize artifact against old RTC workspaces/paths ---
-          rm -f dist/lab/workspaces/*.jupyterlab-workspace || true
-          # rewrite any lingering "RTC:" to a safe relative root
-          if grep -R '"RTC:' -n dist 2>/dev/null; then
-            sed -i 's/"RTC:/"./g' $(grep -R -l '"RTC:' dist)
-          fi
-
-          # sanity: ensure static app exists
-          test -f dist/dist/jupyter-lite.json || (echo "missing dist/dist/jupyter-lite.json"; ls -R dist; exit 1)
-
+          cp README.md content
+          jupyter lite build --contents content --output-dir dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ./dist
 
   deploy:
     needs: build
