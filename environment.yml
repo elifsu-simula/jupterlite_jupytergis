@@ -1,0 +1,6 @@
+name: JupyterGIS
+channels:
+  - https://repo.mamba.pm/emscripten-forge
+  - conda-forge
+dependencies:
+  - jupytergis
