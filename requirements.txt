@@ -43,8 +43,3 @@ ipyleaflet
 # Python: plotting libraries (optional)
 plotly>=6,<7
 bqplot
-
-
-# JupyterLab: JupyterGIS extension (optional)
-jupytergis
-jupyterlite-pyodide-lock
