@@ -24,9 +24,8 @@ jobs:
       - name: Build the JupyterLite site
         run: |
           cp README.md content
-          jupyter lite build --contents content --output-dir dist
           jupyter lite clean
-          jupyter lite build --debug
+          jupyter lite build --contents content --output-dir dist
           rm -f _output/lab/workspaces/*.jupyterlab-workspace || true
           if grep -R '"RTC:' -n _output 2>/dev/null; then
             echo 'ERROR: Found "RTC:" reference in built site'; exit 1
