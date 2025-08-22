@@ -1,0 +1,14 @@
+{
+  "LiteBuildConfig": { "ignore_sys_prefix": false },
+  "jupyter-config-data": {
+    "collaborative": false,
+    "disabledExtensions": [
+      "jupyter_collaboration",
+      "@jupyterlab/collaboration-extension"
+    ],
+    "disabledPlugins": [
+      "jupyter_collaboration:*",
+      "@jupyterlab/collaboration-extension:*"
+    ]
+  }
+}

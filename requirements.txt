@@ -5,6 +5,5 @@ notebook~=7.4.5
 
 jupyterlite-pyodide-kernel==0.6.1
 
-jupytergis_lite
-jupytergis_core
 jupytergis
+ipywidgets>=8,<9
