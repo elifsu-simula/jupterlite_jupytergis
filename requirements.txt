@@ -47,4 +47,4 @@ bqplot
 
 # JupyterLab: JupyterGIS extension (optional)
 jupytergis
-jupyterlite-pyodide-lock==0.6.1
+jupyterlite-pyodide-lock
