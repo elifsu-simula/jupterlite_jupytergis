@@ -44,4 +44,7 @@ ipyleaflet
 plotly>=6,<7
 bqplot
 
+
+# JupyterLab: JupyterGIS extension (optional)
 jupytergis
+jupyterlite-pyodide-lock==0.6.1
